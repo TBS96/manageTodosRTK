@@ -1,13 +1,15 @@
 import React from 'react'
 import './App.css'
 import AddTodo from './components/AddTodo'
+import TodosList from './components/TodosList'
 
 const App = () => {
   return (
-    <div>
+    <>
       <h1>Welcome to Redux Toolkit</h1>
       <AddTodo />
-    </div>
+      <TodosList />
+    </>
   )
 }
 

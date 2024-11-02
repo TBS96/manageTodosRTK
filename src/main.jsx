@@ -9,3 +9,7 @@ createRoot(document.getElementById('root')).render(
     <App />
   </Provider>
 )
+
+
+// NOTES:
+// in contextAPI we use property 'value' to provide the value to the child component, while in RTK we use property 'store' as value to refer the store.
