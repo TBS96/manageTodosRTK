@@ -11,7 +11,7 @@ const TodosList = () => {
     <>
       <div>Todos</div>
       {todos.map((eachTodo) => (
-        <li key={eachTodo.id} className='mt-4 flex justify-between items-center bg-zinc-800 px-4 py-2 rounded-lg'>
+        <li key={eachTodo.id} className='mt-4 flex justify-between items-center bg-zinc-800 px-4 py-2 rounded-lg shadow-xl'>
         
         <div className='text-white'>{eachTodo.textValue}</div>
 
