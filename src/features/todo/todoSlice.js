@@ -22,7 +22,7 @@ export const todoSlice = createSlice({
         },
         removeTodo: (state, action) => {
             const userResponse = prompt(`Are you sure you want to delete this task? (Type 'Y' or 'y' or hit Cancel)`)
-            if (userResponse === '' || userResponse !== 'Y' || userResponse === 'y') {
+            if (userResponse === '' || userResponse !== 'Y' && userResponse !== 'y') {
                 alert('Task deletion cancelled.')
             }
             else if (userResponse === 'Y' || userResponse === 'y') {
