@@ -41,13 +41,13 @@ export default todoSlice.reducer
 
 
 // NOTES:
-// redux-toolkit is slightly different from redux. in RTK we call reducers as slices(features), thats why for naming convention, we renaed this file as todoSlice.js
+// redux-toolkit is slightly different from redux. in RTK we call reducers as slices(features), thats why for naming convention, we renamed this file as todoSlice.js
 
 // slice is the bigger version of a reducer(functionality), it groups related actions and reducers together.
 
 // reducers are pure functions having properties(addTodo, removeTodo) and a callback function(state, action) with state and action as parameters.
 
-// rtk differs from contextAPI in that, in contextAPI we were just delaring fns. and not writing definitions, whereas in RTK, we are actually defining functions(slices).
+// rtk differs from contextAPI in that, in contextAPI we were just declaring fns. and not writing definitions, whereas in RTK, we are actually defining functions(slices).
 
 // state parameter gives access to the current state of the slice, here 'todos'.
 
