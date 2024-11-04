@@ -10,7 +10,7 @@ const AddTodo = () => {
 
     const addTodoHandler = (e) => {
         e.preventDefault()
-        if (!input) return alert('Please enter a task!')
+        if (!input.trim()) return alert('Please enter a task!')
         dispatch(addTodo(input))
         setInput('')
     }
