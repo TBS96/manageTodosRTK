@@ -2,10 +2,10 @@ import { createSlice, nanoid } from "@reduxjs/toolkit"
 
 const initialState = {
     todos: JSON.parse(localStorage.getItem('todos')) || [
-        {
-            id: 1,
-            textValue: 'Hello RTK'
-        }
+        // {
+        //     id: 1,
+        //     textValue: 'Hello RTK'
+        // }
     ]
 }
 
@@ -21,7 +21,13 @@ export const todoSlice = createSlice({
             state.todos.push(eachTodo)
         },
         removeTodo: (state, action) => {
-            state.todos = state.todos.filter((eachTodo) => eachTodo.id !== action.payload)
+            const userResponse = prompt(`Are you sure you want to delete this task? (Type 'Y' or 'y' or hit Cancel)`)
+            if (userResponse === '' || userResponse !== 'Y' || userResponse === 'y') {
+                alert('Task deletion cancelled.')
+            }
+            else if (userResponse === 'Y' || userResponse === 'y') {
+                state.todos = state.todos.filter((eachTodo) => eachTodo.id !== action.payload);
+            }
         },
         updateTodo: (state, action) => {
             const {id, newTextValue} = action.payload // extract the id and newTextValue from action.payload
@@ -52,3 +58,5 @@ export default todoSlice.reducer
 // state parameter gives access to the current state of the slice, here 'todos'.
 
 // action is the object that gets dispatched to the store(to get the updated state). Basically data is being passed to action.
+
+// don't want to show anything when loaded for the first time, thus we set the initial state to an empty array.
